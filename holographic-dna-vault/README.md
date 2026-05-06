@@ -2,7 +2,7 @@
 
 A real-time Three.js WebGL visualization of a holographic genomic archive — a vault built from synthetic DNA strands floating in a futuristic sci-fi HUD.
 
-![Holographic DNA Vault](assets/preview-description.md)
+![Holographic DNA Vault](https://oomcmoo.github.io/holographic-dna-vault/holographic-dna-vault/)
 
 ## ✨ Features
 
