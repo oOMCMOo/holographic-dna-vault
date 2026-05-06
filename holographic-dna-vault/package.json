@@ -1,0 +1,20 @@
+{
+  "name": "holographic-dna-vault",
+  "version": "1.0.0",
+  "description": "Holographic DNA Vault — a Three.js genomic archive visualizer built from synthetic DNA strands",
+  "type": "module",
+  "scripts": {
+    "dev":   "npx serve . -p 3000",
+    "start": "npx serve . -p 3000",
+    "build": "echo 'Static project — no build step required. Deploy the root folder.'"
+  },
+  "keywords": ["three.js", "webgl", "dna", "holographic", "visualization", "genomics"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

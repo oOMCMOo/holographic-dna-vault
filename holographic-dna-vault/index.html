@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Holographic DNA Vault</title>
+  <meta name="theme-color" content="#000408">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <div id="hud" class="hud">
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+
+    <div class="hud-top">
+      <div class="hud-badge"><span class="hud-badge-dot"></span>GENOMIC ARCHIVE</div>
+      <div class="hud-title">HOLOGRAPHIC DNA VAULT</div>
+      <div class="hud-status">
+        <span id="statusDot" class="status-dot active"></span>
+        <span id="statusText">SCANNING</span>
+      </div>
+    </div>
+
+    <div class="panel panel-left glass">
+      <div class="panel-label">SEQUENCE DATA</div>
+      <div class="panel-row"><span class="label">STRAIN ID</span><span class="value mono" id="strainId">SYN-7A4F2C</span></div>
+      <div class="panel-row"><span class="label">BASE PAIRS</span><span class="value mono" id="basePairs">3,247,891</span></div>
+      <div class="panel-row"><span class="label">INTEGRITY</span><span class="value mono accent" id="integrity">99.97%</span></div>
+      <div class="panel-row"><span class="label">ENCODING</span><span class="value mono">QUATERNARY</span></div>
+      <div class="separator"></div>
+      <div class="panel-label">VAULT STATUS</div>
+      <div class="bar-group">
+        <div class="bar-label">DENSITY</div>
+        <div class="bar-track"><div class="bar-fill" id="barDensity" style="width:87%"></div></div>
+        <div class="bar-val">87%</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-label">COHERENCE</div>
+        <div class="bar-track"><div class="bar-fill" id="barCoherence" style="width:94%"></div></div>
+        <div class="bar-val">94%</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-label">STABILITY</div>
+        <div class="bar-track"><div class="bar-fill" id="barStability" style="width:76%"></div></div>
+        <div class="bar-val">76%</div>
+      </div>
+    </div>
+
+    <div class="panel panel-right glass">
+      <div class="panel-label">LIVE STREAM</div>
+      <div id="dnaStream" class="dna-stream mono"></div>
+      <div class="separator"></div>
+      <div class="panel-label">ARCHIVE NODES</div>
+      <div id="nodeList" class="node-list"></div>
+    </div>
+
+    <div class="hud-bottom">
+      <div class="hud-coords mono" id="coords">θ: 0.00  φ: 0.00  r: 5.00</div>
+      <div class="hud-center-info">
+        <span class="mono dim">SYNTHETIC STRANDS</span>
+        <span class="mono accent" id="strandCount">0</span>
+        <span class="mono dim">/ ACTIVE</span>
+      </div>
+      <div class="hud-timestamp mono" id="timestamp">2157.042.09:41:33</div>
+    </div>
+
+    <div class="reticle">
+      <div class="reticle-ring r1"></div>
+      <div class="reticle-ring r2"></div>
+      <div class="reticle-dot"></div>
+    </div>
+
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+    <!-- Buttons injected by CryptoUI and ArchiveViewer here -->
+  </div>
+
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <div class="loader-text mono">INITIALIZING VAULT</div>
+      <div class="loader-bar-track"><div class="loader-bar" id="loaderBar"></div></div>
+      <div class="loader-sub mono" id="loaderSub">Allocating holographic memory...</div>
+    </div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three":          "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/":  "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
